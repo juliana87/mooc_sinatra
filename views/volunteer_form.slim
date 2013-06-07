@@ -1,0 +1,18 @@
+label for="field" Field:
+input#field type="text" name="volunteer[field]" value="#{@volunteer.field}"
+
+label for="place" City:
+input#place type="text" name="volunteer[place]" value="#{@volunteer.place}"
+
+label for="organization" Organization:
+input#organization type="text" name="volunteer[organization]" value="#{@volunteer.organization}"
+
+label for="vacancy" Vacancy:
+input#vacancy type="text" name="volunteer[vacancy]" value="#{@volunteer.vacancy}"
+
+label for="description" Description:
+textarea#description name="volunteer[description]" == @volunteer.description
+
+label for="posted_on" Date(mm/dd/yyyy): 
+input#released_on type="text" name="volunteer[posted_on]" value="#{@volunteer.posted_on.strftime("%m/%d/%Y") if @volunteer.posted_on}"
+input type="submit" value="Post Vacancy"

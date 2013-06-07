@@ -1,0 +1,4 @@
+h1 Edit Vacancy
+form method="POST" action="/volunteers/#{@volunteer.id}"
+  input type="hidden" name="_method" value="PUT"
+  == slim :volunteer_form

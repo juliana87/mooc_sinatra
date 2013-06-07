@@ -1,0 +1,10 @@
+h1 Students
+
+p You can browse bellow students in our database:
+
+- if @students.any?
+  ul#students
+  -@students.each do |student|
+    li <a href="/students/#{student.id}">#{student.name}</a>
+- else
+  p No students in the database!

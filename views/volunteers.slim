@@ -1,0 +1,8 @@
+h1 Volunteering opportunities 
+a href="/volunteers/new" Post a new vacancy
+- if @volunteers.any?
+ ul#volunteers
+   -@volunteers.each do |volunteer|
+    li <a href="/volunteers/#{volunteer.id}">#{volunteer.vacancy}</a>
+- else
+  p Currently there are no volunteer opportunities.

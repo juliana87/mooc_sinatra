@@ -1,0 +1,12 @@
+h1= @student.name
+p Contact: #{@student.e_mail}
+p Rank: #{@student.rank} of 5
+p Activity level: #{@student.activity_level} of 10. Scale of activity level may vary from 1 to 10, being 1 very low and 10 very high participation in the course. This number is calculated as an avarage of number of comments and posts in the forum, number of times videos are watched and number of quizzes and assignments completed.
+p Enrolled in: Introduction to Communication Science
+p Alumnus: Social Network Analysis
+
+p <a href="/students"> See all students enrolled</a>
+p <a href="/students/#{@student.id}/edit">Edit profile</a>
+form action="/students/#{@student.id}" method="POST"
+  input type="hidden" name="_method" value="INVITE"
+  input type="submit" value="Invite to volunteer"

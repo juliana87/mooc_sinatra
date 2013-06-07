@@ -1,0 +1,11 @@
+h1= @volunteer.vacancy
+h1= @volunteer.organization
+p City: #{@volunteer.place}
+p Field: #{@volunteer.field}
+pre Description: #{@volunteer.description}
+p Posted on: #{@volunteer.posted_on.strftime("%e %B %Y") if @volunteer.posted_on}
+p <a href="/volunteers">Back to all vacancies</a>
+p <a href="/volunteers/#{@volunteer.id}/edit">edit this vacancy</a>
+form action = "/volunteers/#{@volunteer.id}" method="POST"
+  input type="hidden" name="_method" value="DELETE"
+  input type="submit" value="delete this vacancy"
